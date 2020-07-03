@@ -5,7 +5,7 @@ An accessibility workshop for developers
 - [Axe browser extension](https://www.deque.com/axe/)
 - [Wave browser extension](https://wave.webaim.org/extension/)
 - [I want to see like the color blind](https://www.crx4chrome.com/extensions/jebeedfnielkcjlcokhiobodkjjpbjia/)
-= [Color contrast analyzer](https://chrome.google.com/webstore/detail/color-contrast-analyzer/dagdlcijhfbmgkjokkjicnnfimlebcll)
+- [Color contrast analyzer](https://chrome.google.com/webstore/detail/color-contrast-analyzer/dagdlcijhfbmgkjokkjicnnfimlebcll)
 - [Voice over basics on Mac](https://www.youtube.com/watch?v=5R-6WvAihms)
 
 ## Install
