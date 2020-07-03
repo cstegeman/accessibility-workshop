@@ -1,0 +1,23 @@
+{
+  "name": "accessibility-workshop",
+  "version": "1.0.0",
+  "description": "An accessibility workshop for developers",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cstegeman/accessibility-workshop.git"
+  },
+  "author": "cstegeman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cstegeman/accessibility-workshop/issues"
+  },
+  "homepage": "https://github.com/cstegeman/accessibility-workshop#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
