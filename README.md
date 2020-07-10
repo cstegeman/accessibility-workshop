@@ -27,3 +27,6 @@ npm start
     * VoiceOver Activation keys (or VO keys) -> Control + Option (referenced as VO)
     * Lock (or unlock) VO keys -> VO + ;
     * Open rotor -> VO + U
+
+## Background information
+* https://www.davidmacd.com/blog/wai-aria-accessbility-for-average-web-developers.html
