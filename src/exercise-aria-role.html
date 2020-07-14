@@ -1,27 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Aria attributes - Accessibility workshop</title>
+    <title>Aria role - Accessibility workshop</title>
     <link rel="stylesheet" href="./css/styles.css" media="all">
 </head>
 <body>
 <main>
-    <h1>Aria attributes</h1>
-
-    <h2>aria-expanded</h2>
-
-    <h2>aria-pressed</h2>
-
-    <h2>aria-label</h2>
-
-    <h2>aria-labelledby</h2>
-
-    <h2>Aria role attribute</h2>
-    <p>group/navigation/button/dialog/img/combobox</p>
-
+    <h1>Aria role</h1>
+    <p>Examples of possible values for the role attribute: group/navigation/button/dialog/img/combobox</p>
+    <p>Use `role` and aria-labelledby to provide context for screenreaders in the follwoing example</p>
     <form method="post">
-        <div role="group" aria-labelledby="fullname">
-            <span id="fullname">Name</span>
+        <div>
+            <span>Name</span>
             <input type="text" name="firstname" placeholder="First name" aria-label="First name">
             <input type="text" name="prefix" placeholder="Prefix" aria-label="Prefix">
             <input type="text" name="lastname" placeholder="Last name" aria-label="Last name">

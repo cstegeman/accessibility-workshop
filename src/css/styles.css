@@ -14,3 +14,33 @@
     white-space: nowrap;
     width: 1px;
 }
+
+.topic {
+    margin-bottom: 1em;
+    padding: .25em;
+    border: black thin solid;
+    background-color: #EEEEFF;
+    width: 40em;
+}
+
+.is-hidden {
+    display: none !important;
+}
+
+.icon-svg {
+    display: inline-block;
+    fill: currentColor;
+    vertical-align: middle;
+    height: 16px;
+    width: 16px;
+}
+
+.icon-svg--color-silver {
+    fill: #bbb;
+    color: #bbb;
+}
+
+.icon-svg--color-blue {
+    fill: #0090e3;
+    color: #0090e3;
+}
