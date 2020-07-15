@@ -44,3 +44,43 @@
     fill: #0090e3;
     color: #0090e3;
 }
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+.menu {
+    background: #0090E3;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation a {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    color: #000;
+    text-decoration: none;
+}
+
+.navigation a:hover, nav a:focus {
+    color: #fff;
+    background: #000;
+}
+
+.navigation a:not(:last-child) {
+    border-right: 1px solid black;
+}
