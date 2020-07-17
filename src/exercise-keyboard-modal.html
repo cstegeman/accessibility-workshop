@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Exercise 2 - keyboard navigation - Modal</title>
+    <link rel="stylesheet" href="css/styles.css" media="all">
+</head>
+<body>
+    <main>
+        <h1>Modal</h1>
+        <section>
+            <button class="open-modal">Register Now!</button>
+
+            <div class="modal">
+                <div class="modal-content">
+                    <h1>Modal Form</h1>
+                    <div>
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName">
+                    </div>
+                    <div>
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName">
+                    </div>
+                    <button id="closeModal">Submit</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        let focusedElementBeforeModal, modal, registerButton;
+        let KEY = {
+            ESCAPE: 27,
+            TAB: 9
+        };
+
+        if (document.querySelector('.modal') && document.querySelector('.open-modal')) {
+            modal = document.querySelector('.modal');
+            registerButton = document.querySelector('.open-modal');
+            registerButton.addEventListener('click', openModal);
+        }
+
+        function openModal() {
+            focusedElementBeforeModal = document.activeElement;
+
+            modal.style.display = 'block';
+            modal.addEventListener('keydown', processEscapeTabKeys);
+
+            let modalElements = 'input:not([disabled]), button:not([disabled])';
+            let focusableElements = modal.querySelectorAll(modalElements);
+
+            let firstElementOfModal = focusableElements[0];
+            let lastElementOfModal = focusableElements[focusableElements.length - 1];
+
+            firstElementOfModal.focus();
+
+            function processEscapeTabKeys(event) {
+                if (event.keyCode === KEY.TAB) {
+                    if (document.activeElement === lastElementOfModal) {
+                        event.preventDefault();
+                        firstElementOfModal.focus();
+                    }
+                }
+                if (event.keyCode === KEY.ESCAPE) {
+                    modal.style.display = 'none';
+                    focusedElementBeforeModal.focus();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
