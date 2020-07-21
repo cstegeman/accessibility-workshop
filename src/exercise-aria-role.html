@@ -5,19 +5,23 @@
     <link rel="stylesheet" href="css/styles.css" media="all">
 </head>
 <body>
-    <main>
-        <h1>Aria role</h1>
-        <p>Examples of possible values for the role attribute: group/navigation/button/dialog/img/combobox</p>
-        <p>Use `role` and aria-labelledby to provide context for screenreaders in the follwoing example</p>
-        <form method="post">
-            <div>
-                <span>Name</span>
-                <input type="text" name="firstname" placeholder="First name" aria-label="First name">
-                <input type="text" name="prefix" placeholder="Prefix" aria-label="Prefix">
-                <input type="text" name="lastname" placeholder="Last name" aria-label="Last name">
-            </div>
-            <button type="submit">Proceed</button>
-        </form>
-    </main>
+<main role="main">
+    <h1>Aria role</h1>
+
+    <p class="notice">Examples of possible values for the role attribute:
+        group/navigation/button/dialog/img/combobox</p>
+
+    <p class="notice">Use `role` and aria-labelledby to provide context for screenreaders in the follwoing example</p>
+
+    <form method="post">
+        <div>
+            <span>Name</span>
+            <input type="text" name="firstname" placeholder="First name" aria-label="First name">
+            <input type="text" name="prefix" placeholder="Prefix" aria-label="Prefix">
+            <input type="text" name="lastname" placeholder="Last name" aria-label="Last name">
+        </div>
+        <button type="submit">Proceed</button>
+    </form>
+</main>
 </body>
 </html>
