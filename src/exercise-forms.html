@@ -5,31 +5,33 @@
     <link rel="stylesheet" href="css/styles.css" media="all">
 </head>
 <body>
-    <main>
-        <h1>Forms</h1>
+<main role="main">
+    <h1>Forms</h1>
 
-        <form method="post">
-            <div>
-                House type:
-                <input type="radio" name="type" value="rental"> Rental<br>
-                <input type="radio" name="type" value="mortgage"> Mortgage
-            </div>
+    <p class="notice">For this exercise provide proper context for the form elements.</p>
 
-            <div>
-                <label for="email"></label>
-                <label for="email">Email address:</label>
-                <input type="email" name="email" value="" id="email">
-            </div>
+    <form method="post">
+        <div>
+            House type:
+            <input type="radio" name="type" value="rental"> Rental<br>
+            <input type="radio" name="type" value="mortgage"> Mortgage
+        </div>
 
-            <div>
-                Name:
-                <input type="text" name="firstname" placeholder="First name">
-                <input type="text" name="prefix" placeholder="Prefix">
-                <input type="text" name="lastname" placeholder="Last name">
-            </div>
+        <div>
+            <label for="email"></label>
+            <label for="email">Email address:</label>
+            <input type="email" name="email" value="" id="email">
+        </div>
 
-            <button type="submit">Proceed</button>
-        </form>
-    </main>
+        <div>
+            Name:
+            <input type="text" name="firstname" placeholder="First name">
+            <input type="text" name="prefix" placeholder="Prefix">
+            <input type="text" name="lastname" placeholder="Last name">
+        </div>
+
+        <button type="submit">Proceed</button>
+    </form>
+</main>
 </body>
 </html>
