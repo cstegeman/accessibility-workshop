@@ -1,7 +1,3 @@
-.icon-svg--height-4 {
-    height: 16px;
-}
-
 .screen-reader-only {
     border: 0;
     clip-path: inset(100%);
@@ -27,6 +23,11 @@
     display: none !important;
 }
 
+/* icons */
+.icon-svg--height-4 {
+    height: 16px;
+}
+
 .icon-svg {
     display: inline-block;
     fill: currentColor;
@@ -45,11 +46,48 @@
     color: #0090e3;
 }
 
+/* notice */
 .notice {
     padding: 12px;
     border: 1px solid #0090e3;
     border-radius: 4px;
     background-color: #f2f7fc;
+}
+
+/* button styling */
+.button,
+.button:visited {
+    background-color: #000;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 64px;
+    font-size: inherit;
+    font-weight: bold;
+    line-height: 16px;
+    outline: none;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover,
+.button:visited:hover,
+.button:focus,
+.button:visited:focus,
+.button:active,
+.button:visited:active {
+     background-color: #666;
+     color: #fff;
+     text-decoration: none;
+}
+
+/* dialog */
+.dialog {
+    padding: 8px;
+    border: 1px solid #000;
+    background-color: #ddd;
 }
 
 /* Keyboard navigation - skip links and nav bar */
@@ -67,6 +105,7 @@
     top: 0;
 }
 
+/* Menu */
 .main-menu {
     background: #023365;
     list-style: none;
@@ -240,4 +279,93 @@
     padding: 20px;
     border: 1px solid #888;
     width: 50%;
+}
+
+/* combobox */
+.sample {
+    border: 1px solid #eeeeee;
+    background: #ffffff;
+    max-width: 30em;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+.custom-select {
+    position: relative;
+}
+.select-css {
+    display: block;
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #444;
+    line-height: 1.3;
+    padding: 0.6em 1.4em 0.5em 0.8em;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+    border-radius: 0.25em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.select-css::-ms-expand {
+    display: none;
+}
+.select-css:hover {
+    border-color: #888;
+}
+.select-css:focus {
+    border: 2px dashed blue;
+    color: #222;
+    outline: none;
+}
+.custom-select-icons {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    z-index: 20;
+    border: 1px solid white;
+    background: transparent;
+}
+.custom-select-options {
+    border: 1px solid #aaa;
+    border-radius: 0 0 0.25em 0.25em;
+    line-height: 1.5;
+    margin: 0;
+    margin-top: -0.5em;
+    padding: 0;
+    list-style-type: none;
+    font-weight: normal;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    width: calc(100% - 1px);
+    background-color: #ffffff;
+}
+.custom-select-options li {
+    padding: 1em;
+}
+.custom-select-options li:hover {
+    background: blue;
+    color: #fff;
+    border: 1px solid blue;
+    border-width: 0 0 0 1px;
+}
+.custom-select-options li:focus {
+    border: 2px dashed blue;
+}
+.icon {
+    fill: ButtonText;
+    pointer-events: none;
+}
+@media screen and (-ms-high-contrast: active) {
+    .icon {
+        fill: ButtonText;
+    }
 }
