@@ -19,24 +19,23 @@
     </div>
 
     <form method="post">
-        <div>
-            House type:
-            <input type="radio" name="type" value="rental"> Rental<br>
-            <input type="radio" name="type" value="mortgage"> Mortgage
+        <div role="group" aria-labelledby="house_type">
+            <span id="house_type">House type:</span>
+            <input type="radio" name="type" value="rental" id="rental"> <label for="rental">Rental</label><br>
+            <input type="radio" name="type" value="mortgage" id="mortgage"> <label for="mortgage">Mortgage</label>
         </div>
 
         <h2>Optional</h2>
         <div>
-            <label for="email"></label>
             <label for="email">Email address:</label>
             <input type="email" name="email" value="" id="email">
         </div>
 
-        <div>
-            Name:
-            <input type="text" name="firstname" placeholder="First name">
-            <input type="text" name="prefix" placeholder="Prefix">
-            <input type="text" name="lastname" placeholder="Last name">
+        <div role="group" aria-labelledby="name">
+            <span id="name">Name:</span>
+            <input type="text" name="firstname" placeholder="First name" aria-label="First name">
+            <input type="text" name="prefix" placeholder="Prefix" aria-label="Prefix">
+            <input type="text" name="lastname" placeholder="Last name" aria-label="last name">
         </div>
 
         <button type="submit">Proceed</button>
