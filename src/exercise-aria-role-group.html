@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Aria role group - Accessibility workshop</title>
+    <link rel="stylesheet" href="css/styles.css" media="all">
+</head>
+<body>
+<main role="main">
+    <h1>Aria role group</h1>
+
+    <p class="notice">Use `role` with attribute `group` and `aria-labelledby` to provide context for screen readers in
+        the following example</p>
+
+    <form method="post">
+        <div role="group" aria-labelledby="name">
+            <span id="name">Name</span>
+            <input type="text" name="firstname" placeholder="First name" aria-label="First name">
+            <input type="text" name="prefix" placeholder="Prefix" aria-label="Prefix">
+            <input type="text" name="lastname" placeholder="Last name" aria-label="Last name">
+        </div>
+        <button type="submit">Proceed</button>
+    </form>
+</main>
+</body>
+</html>
