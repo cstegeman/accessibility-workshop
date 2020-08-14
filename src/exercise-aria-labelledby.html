@@ -9,12 +9,11 @@
     <h1>Aria labelledby</h1>
 
     <p class="notice">For the following section use the aria-labelledby attribute to apply overall context about
-        salutation for screen
-        readers.</p>
+        salutation for screen readers.</p>
 
     <section>
-        <span>Salutation</span>
-        <div role="radiogroup">
+        <div role="radiogroup" aria-labelledby="gender">
+            <span id="gender">Salutation</span>
             <div>
                 <input id="shipment_address_gender-M" type="radio"
                        name="shipment_address_gender"

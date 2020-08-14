@@ -9,13 +9,14 @@
 </head>
 <body>
 <main role="main">
+    <h1>Aria role combobox</h1>
     <p class="notice">Make the following dropdown accessible for screen readers.</p>
 
     <h2>Custom select input</h2>
     <div class="sample">
         <label for="custom-select-input">User Type</label>
         <div id="custom-select-status" class="screen-reader-only" aria-live="polite"></div>
-        <div class="custom-select" id="myCustomSelect">
+        <div class="custom-select" id="myCustomSelect" aria-expanded="false">
             <input type="text" id="custom-select-input" class="select-css" aria-describedby="custom-select-info">
             <span id="custom-select-info"
                   class="screen-reader-only">Arrow down for options or start typing to filter.</span>
@@ -33,7 +34,7 @@
                   <path d="M11.043 10.457l1.414-1.414-4.457-4.457-4.457 4.457 1.414 1.414 3.043-3.043z"></path>
                 </svg>
             </span>
-            <ul class="custom-select-options is-hidden" id="custom-select-list">
+            <ul class="custom-select-options is-hidden" id="custom-select-list" aria-label="Select a type for the user">
                 <li><strong>User</strong><br>Logged in Users can read locked content and update their profile.</li>
                 <li><strong>Author</strong><br>Authors can create, edit and delete their own posts.</li>
                 <li><strong>Editor</strong><br>Editors can create, edit and delete all posts by all authors.</li>

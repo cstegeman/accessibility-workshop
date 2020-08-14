@@ -12,7 +12,10 @@
         toggling content.</p>
 
     <section>
-        <button id="button1" aria-controls="t1" onclick="toggleRegion()"><span>Show</span> Topic 1</button>
+        <button id="button1" aria-controls="t1" onclick="toggleRegion()" aria-expanded="false">
+            <span>Show</span>
+            Topic 1
+        </button>
         <div id="t1" class="topic is-hidden" role="region" tabindex="-1">
             Topic 1 is all about being Topic 1 and may or may not have anything to do with other topics.
         </div>
@@ -26,9 +29,11 @@
                 if (target.classList.contains(toggleClass)) {
                     target.classList.remove(toggleClass);
                     element.focus();
+                    element.setAttribute('aria-expanded', 'true')
                     text.textContent = 'Hide';
                 } else {
                     target.classList.add(toggleClass);
+                    element.setAttribute('aria-expanded', 'false')
                     text.textContent = 'Show';
                 }
             }

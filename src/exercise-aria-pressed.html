@@ -12,7 +12,7 @@
         changing the button state.</p>
 
     <section>
-        <button id="button1" type="button" aria-label="Put on wish list" onclick="addToWishList()">
+        <button id="button1" type="button" aria-label="Put on wish list" onclick="addToWishList()" aria-pressed="false">
             <svg class="icon-svg icon-svg--color-silver js-icon-empty"
                  aria-hidden="true"
                  viewBox="0 0 32 30.8"
@@ -38,9 +38,11 @@
                 if (iconEmpty.classList.contains(toggleClass)) {
                     iconEmpty.classList.remove(toggleClass);
                     iconFull.classList.add(toggleClass);
+                    element.setAttribute('aria-pressed', 'false');
                 } else {
                     iconEmpty.classList.add(toggleClass);
                     iconFull.classList.remove(toggleClass);
+                    element.setAttribute('aria-pressed', 'true');
                 }
             }
         </script>

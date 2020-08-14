@@ -12,9 +12,9 @@
 
     <button id="button-open" type="button">Show stock information</button>
 
-    <div class="dialog is-hidden">
-        <h2>On Stock</h2>
-        <p>If you order now, your order will be ready for you right away in our store in Amsterdam</p>
+    <div class="dialog is-hidden" role="dialog" aria-labelledby="title" aria-describedby="description">
+        <h2 id="title">On Stock</h2>
+        <p id="description">If you order now, your order will be ready for you right away in our store in Amsterdam</p>
         <button id="button-close">Close</button>
     </div>
 
@@ -23,17 +23,19 @@
             const buttonOpen = document.querySelector('#button-open');
             const buttonClose = document.querySelector('#button-close');
             const dialog = document.querySelector('.dialog');
+            let activeElement;
 
             buttonClose.addEventListener('click', () => {
+                if (activeElement) {
+                    activeElement.focus();
+                }
                 dialog.classList.add('is-hidden');
             })
 
             buttonOpen.addEventListener('click', () => {
-                if (dialog.classList.contains('is-hidden')) {
-                    dialog.classList.remove('is-hidden');
-                } else {
-                    dialog.classList.add('is-hidden')
-                }
+                dialog.classList.remove('is-hidden');
+                activeElement = document.activeElement;
+                buttonClose.focus();
             })
         }());
     </script>
