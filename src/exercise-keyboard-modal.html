@@ -7,6 +7,7 @@
 <body>
     <main>
         <h1>Modal</h1>
+        <p class="notice">For this exercise provide right steps to access the modal box using keyboard navigation.</p>
         <section>
             <button class="open-modal">Register Now!</button>
 
@@ -41,8 +42,6 @@
         }
 
         function openModal() {
-            focusedElementBeforeModal = document.activeElement;
-
             modal.style.display = 'block';
             modal.addEventListener('keydown', processEscapeTabKeys);
 
@@ -55,16 +54,7 @@
             firstElementOfModal.focus();
 
             function processEscapeTabKeys(event) {
-                if (event.keyCode === KEY.TAB) {
-                    if (document.activeElement === lastElementOfModal) {
-                        event.preventDefault();
-                        firstElementOfModal.focus();
-                    }
-                }
-                if (event.keyCode === KEY.ESCAPE) {
-                    modal.style.display = 'none';
-                    focusedElementBeforeModal.focus();
-                }
+                // Write pseudo code here
             }
         }
     </script>

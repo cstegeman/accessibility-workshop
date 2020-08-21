@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Exercise 1 - color - Accessibility workshop</title>
+        <title>Exercise 1 - Color - Accessibility workshop</title>
         <link rel="stylesheet" href="css/styles.css" media="all">
     </head>
     <body>
         <main role="main">
-            <h1>Exercise 1 - color - Accessibility workshop</h1>
+            <h1>Exercise 1 - Color - Accessibility workshop</h1>
             <section>
                 <h2>Color</h2>
 
@@ -14,42 +14,25 @@
                     For the following exercise identify and fix the issue with toggle switch
                 </p>
 
-                <table class="color-table" role="presentation">
-                    <thead>
-                        <tr>
-                            <th>S No.</th>
-                            <th>Toggle</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Example 1</strong></td>
-                            <td>
-                                <div class="toggle--on-off">
-                                    <input type="checkbox" id="demo1" class="toggle__input" checked>
-                                    <label class="toggle__label" for="demo1">
-                                        <span class="screen-reader-only">Enable or disable options</span>
-                                        <span class="toggle__disabled-msg" data-checked="On" data-unchecked="Off" aria-hidden="true"></span>
-                                        <span class="toggle-switch" aria-hidden="true"></span>
-                                    </label>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><strong>Example 2</strong></td>
-                            <td>
-                                <div class="toggle--ui-switch">
-                                    <input type="checkbox" id="demo2" class="toggle__input">
-                                    <label class="toggle__label" for="demo2">
-                                        <span class="toggle__disabled-msg" data-checked="Option A is selected" data-unchecked="Option B is selected"></span>
-                                        <span class="screen-reader-only">Enable or disable options</span>
-                                        <span class="toggle-switch" role="presentation" aria-hidden="true"></span>
-                                    </label>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <p>Example 1</p>
+                <div class="toggle--on-off">
+                    <input type="checkbox" id="demo1" class="toggle__input" checked>
+                    <label class="toggle__label" for="demo1">
+                        <span class="screen-reader-only">Enable or disable options</span>
+                        <span class="toggle__disabled-msg" data-checked="On" data-unchecked="Off" aria-hidden="true"></span>
+                        <span class="toggle-switch" aria-hidden="true"></span>
+                    </label>
+                </div>
+
+                <p>Example 2</p>
+                <div class="toggle--ui-switch">
+                    <input type="checkbox" id="demo2" class="toggle__input">
+                    <label class="toggle__label" for="demo2">
+                        <span class="toggle__disabled-msg" data-checked="Option A is selected" data-unchecked="Option B is selected"></span>
+                        <span class="screen-reader-only">Enable or disable options</span>
+                        <span class="toggle-switch" role="presentation" aria-hidden="true"></span>
+                    </label>
+                </div>
             </section>
         </main>
     </body>
