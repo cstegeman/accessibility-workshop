@@ -20,7 +20,14 @@
                     <label class="toggle__label" for="demo1">
                         <span class="screen-reader-only">Enable or disable options</span>
                         <span class="toggle__disabled-msg" data-checked="On" data-unchecked="Off" aria-hidden="true"></span>
-                        <span class="toggle-switch" aria-hidden="true"></span>
+                        <span class="toggle-switch" aria-hidden="true">
+                            <span class="toggle-option-LEFT" aria-hidden="true">
+                                On
+                            </span>
+                            <span class="toggle-option-RIGHT" aria-hidden="true">
+                                Off
+                            </span>
+                        </span>
                     </label>
                 </div>
 
@@ -30,7 +37,13 @@
                     <label class="toggle__label" for="demo2">
                         <span class="toggle__disabled-msg" data-checked="Option A is selected" data-unchecked="Option B is selected"></span>
                         <span class="screen-reader-only">Enable or disable options</span>
+                        <span class="toggle-option-LEFT" aria-hidden="true">
+                            <svg class="toggle__svg" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 28 28" xml:space="preserve"><polygon points="28 22.4 19.6 14 28 5.6 22.4 0 14 8.4 5.6 0 0 5.6 8.4 14 0 22.4 5.6 28 14 19.6 22.4 28 " fill="#030104"/></svg>
+                        </span>
                         <span class="toggle-switch" role="presentation" aria-hidden="true"></span>
+                        <span class="toggle-option-RIGHT" aria-hidden="true">
+                            <svg class="toggle__svg" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="548.9" height="548.9" viewBox="0 0 548.9 548.9" xml:space="preserve"><polygon points="449.3 48 195.5 301.8 99.5 205.9 0 305.4 95.9 401.4 195.5 500.9 295 401.4 548.9 147.5 "/></svg>
+                        </span>
                     </label>
                 </div>
             </section>

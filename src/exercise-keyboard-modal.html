@@ -42,6 +42,8 @@
         }
 
         function openModal() {
+            focusedElementBeforeModal = document.activeElement;
+
             modal.style.display = 'block';
             modal.addEventListener('keydown', processEscapeTabKeys);
 
@@ -54,7 +56,16 @@
             firstElementOfModal.focus();
 
             function processEscapeTabKeys(event) {
-                // Write pseudo code here
+                if (event.keyCode === KEY.TAB) {
+                    if (document.activeElement === lastElementOfModal) {
+                        event.preventDefault();
+                        firstElementOfModal.focus();
+                    }
+                }
+                if (event.keyCode === KEY.ESCAPE) {
+                    modal.style.display = 'none';
+                    focusedElementBeforeModal.focus();
+                }
             }
         }
     </script>
