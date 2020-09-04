@@ -6,7 +6,6 @@ An accessibility workshop for developers
 - [Wave browser extension](https://wave.webaim.org/extension/)
 - [Accessibility Insights for Web](https://accessibilityinsights.io/docs/en/web/overview)
 - [I want to see like the color blind](https://www.crx4chrome.com/extensions/jebeedfnielkcjlcokhiobodkjjpbjia/)
-- [Color contrast analyzer](https://chrome.google.com/webstore/detail/color-contrast-analyzer/dagdlcijhfbmgkjokkjicnnfimlebcll)
 - [Voice over basics on Mac](https://www.youtube.com/watch?v=5R-6WvAihms)
 
 ## Install
@@ -28,6 +27,7 @@ npm start
     * VoiceOver Activation keys (or VO keys) -> Control + Option (referenced as VO)
     * Lock (or unlock) VO keys -> VO + ;
     * Open rotor -> VO + U
+    * Press VO to silence VoiceOver when it is speaking
 
 ## Background information
 * https://www.davidmacd.com/blog/wai-aria-accessbility-for-average-web-developers.html
