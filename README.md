@@ -28,6 +28,7 @@ npm start
     * Lock (or unlock) VO keys -> VO + ;
     * Open rotor -> VO + U
     * Press VO to silence VoiceOver when it is speaking
+    * Even [more shortcuts](https://dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts)
 
 ## Background information
 * https://www.davidmacd.com/blog/wai-aria-accessbility-for-average-web-developers.html
