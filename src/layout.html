@@ -4,18 +4,18 @@
         <title>Layout - Accessibility workshop</title>
         <link rel="stylesheet" href="css/styles.css" media="all">
         <style>
-            .layout-table {
+            .table {
                 width: 100%;
             }
 
-            .layout-table td {
+            .table td {
                 padding: 18px 8px;
                 vertical-align: middle;
                 border-bottom: 1px solid #ddd;
                 font-size: 14px;
             }
 
-            .layout-table tr td:first-of-type {
+            .table tr td:first-of-type {
                 width: 34%;
             }
         </style>
@@ -24,21 +24,29 @@
         <main role="main">
             <h1>Layout - Accessibility workshop</h1>
             <section>
-                <h2>Layout</h2>
+                <div class="notice">
+                    For the following exercise:
+                    <ol>
+                        <li>Use the <a href="https://wave.webaim.org/extension/">WAVE browser extension</a> to
+                            investgate the page
+                        </li>
+                        <li>Fix the table below</li>
+                    </ol>
+                </div>
 
-                <p class="notice">
-                    For the following exercise identify the issue with the layout and fix it.
-                </p>
-
-                <table class="layout-table">
+                <table class="table">
                     <tbody>
                         <tr>
-                            <td>Captain America</td>
-                            <td>John Vim</td>
+                            <td>Nirvana</td>
+                            <td>Smells Like Teen Spirit</td>
                         </tr>
                         <tr>
-                            <td>Hulk</td>
-                            <td>Rex Loek</td>
+                            <td>Lady Gaga</td>
+                            <td>Poker Face</td>
+                        </tr>
+                        <tr>
+                            <td>Grunge</td>
+                            <td>Pop</td>
                         </tr>
                     </tbody>
                 </table>
