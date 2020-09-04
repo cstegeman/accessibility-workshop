@@ -90,21 +90,6 @@
   background-color: #ddd;
 }
 
-/* Keyboard navigation - skip links and nav bar */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #023365;
-  color: white;
-  padding: 8px;
-  z-index: 100;
-}
-
-.skip-link:focus {
-  top: 0;
-}
-
 /* Menu */
 .main-menu {
   background: #023365;
