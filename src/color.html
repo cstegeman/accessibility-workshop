@@ -1,12 +1,295 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Exercise 1 - Color - Accessibility workshop</title>
+        <title>Color - Accessibility workshop</title>
         <link rel="stylesheet" href="css/styles.css" media="all">
+        <style>
+            .toggle__label {
+                box-sizing: border-box;
+                margin: 0;
+                user-select: none;
+            }
+
+            .ic-Form-group.ic-Form-group--horizontal .toggle__label {
+                display: inline-flex;
+                align-items: center;
+            }
+
+            .toggle__input {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .toggle__input:checked ~ label .toggle-switch:after {
+                transform: translate3d(100%, 0, 0);
+            }
+
+            .toggle__input:checked ~ label .toggle__disabled-msg:before {
+                content: attr(data-checked);
+            }
+
+            .toggle__input[disabled] ~ label .toggle__disabled-msg {
+                display: block;
+            }
+
+            .toggle__input[disabled] ~ label .toggle-switch, .toggle__input[disabled] ~ label [class^="toggle-option-"] {
+                display: none;
+            }
+
+            .toggle-switch {
+                transition: background 0.1s, border-color 0.1s;
+                /*display: inline-block;*/
+                position: relative;
+                line-height: 1;
+                display: flex;
+                align-items: center;
+                background-clip: padding-box;
+            }
+
+            .toggle-switch::after {
+                transition: all 0.1s ease-in-out;
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translate3d(0, 0, 0);
+                border-radius: 100%;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+                background-image: url("https://cl.ly/320m31452k2X/handle.svg");
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                background-size: 20px;
+            }
+
+            .toggle__disabled-msg {
+                display: none;
+            }
+
+            .toggle__disabled-msg:before {
+                content: attr(data-unchecked);
+                font-style: italic;
+                opacity: 0.8;
+            }
+
+            [class^="toggle-option-"] {
+                transition: opacity 0.2s, transform 0.2s;
+                flex: 0 0 50%;
+                text-align: center;
+                position: relative;
+                z-index: 1;
+                text-transform: uppercase;
+                font-weight: bold;
+                line-height: 1;
+                speak: none;
+                box-sizing: border-box;
+            }
+
+            .toggle--on-off {
+                display: inline-block;
+                vertical-align: middle;
+                position: relative;
+            }
+
+            .toggle--on-off .toggle__input:focus ~ label .toggle-switch::after {
+                box-shadow: inset 0 0 0 1px white, inset 0 0 0 3px #333, 0 3px 6px rgba(0, 0, 0, 0.3);
+            }
+
+            .toggle--on-off .toggle__input:checked ~ label .toggle-switch {
+                background: #009b16;
+                border-color: #009b16;
+            }
+
+            .toggle--on-off .toggle__input:checked ~ label .toggle-option-LEFT {
+                color: white;
+            }
+
+            .toggle--on-off .toggle__input:checked ~ label .toggle-option-LEFT .toggle__svg > * {
+                fill: white;
+            }
+
+            .toggle--on-off .toggle__input:checked ~ label .toggle-option-RIGHT {
+                color: white;
+            }
+
+            .toggle--on-off .toggle__input:checked ~ label .toggle-option-RIGHT .toggle__svg > * {
+                fill: white;
+            }
+
+            .toggle--on-off .toggle__input:checked:focus ~ label .toggle-switch::after {
+                box-shadow: inset 0 0 0 1px white, inset 0 0 0 3px #009b16, 0 3px 6px rgba(0, 0, 0, 0.3);
+            }
+
+            .toggle--on-off .toggle-switch {
+                width: 66px;
+                height: 33px;
+                background: #333;
+                border: 2px solid #333;
+                border-radius: 18.5px;
+            }
+
+            .ic-Form-group.ic-Form-group--horizontal .toggle--on-off .toggle-switch {
+                flex: 0 0 66px;
+            }
+
+            .toggle--on-off .toggle-switch:after {
+                background-color: white;
+                width: 33px;
+                height: 33px;
+            }
+
+            .toggle--on-off .toggle-option-LEFT {
+                color: white;
+            }
+
+            .toggle--on-off .toggle-option-LEFT .toggle__svg > * {
+                fill: white;
+            }
+
+            .toggle--on-off .toggle-option-RIGHT {
+                color: white;
+            }
+
+            .toggle--on-off .toggle-option-RIGHT .toggle__svg > * {
+                fill: white;
+            }
+
+            .toggle--on-off .toggle__svg {
+                max-width: 16.5px;
+                max-height: 16.5px;
+            }
+
+            .toggle--on-off [class^="toggle-option-"] {
+                transition-delay: 0.1s;
+            }
+
+            .toggle--on-off .toggle-option-LEFT {
+                opacity: 0;
+            }
+
+            .toggle--on-off .toggle-option-RIGHT {
+                opacity: 1;
+            }
+
+            .toggle--on-off .toggle__input:checked ~ label .toggle-option-LEFT {
+                opacity: 1;
+            }
+
+            .toggle--on-off .toggle__input:checked ~ label .toggle-option-RIGHT {
+                opacity: 0;
+            }
+
+            .toggle--ui-switch {
+                display: inline-block;
+                vertical-align: middle;
+                position: relative;
+            }
+
+            .toggle--ui-switch .toggle__input:focus ~ label .toggle-switch::after {
+                box-shadow: inset 0 0 0 1px white, inset 0 0 0 3px #333, 0 3px 6px rgba(0, 0, 0, 0.3);
+            }
+
+            .toggle--ui-switch .toggle__input:checked ~ label .toggle-switch {
+                background: #333;
+                border-color: #333;
+            }
+
+            .toggle--ui-switch .toggle__input:checked ~ label .toggle-option-LEFT {
+                color: #253138;
+            }
+
+            .toggle--ui-switch .toggle__input:checked ~ label .toggle-option-LEFT .toggle__svg > * {
+                fill: #253138;
+            }
+
+            .toggle--ui-switch .toggle__input:checked ~ label .toggle-option-RIGHT {
+                color: #00ac19;
+            }
+
+            .toggle--ui-switch .toggle__input:checked ~ label .toggle-option-RIGHT .toggle__svg > * {
+                fill: #00ac19;
+            }
+
+            .toggle--ui-switch .toggle__input:checked:focus ~ label .toggle-switch::after {
+                box-shadow: inset 0 0 0 1px white, inset 0 0 0 3px #333, 0 3px 6px rgba(0, 0, 0, 0.3);
+            }
+
+            .toggle--ui-switch .toggle-switch {
+                width: 66px;
+                height: 33px;
+                background: #333;
+                border: 2px solid #333;
+                border-radius: 18.5px;
+            }
+
+            .ic-Form-group.ic-Form-group--horizontal .toggle--ui-switch .toggle-switch {
+                flex: 0 0 66px;
+            }
+
+            .toggle--ui-switch .toggle-switch:after {
+                background-color: white;
+                width: 33px;
+                height: 33px;
+            }
+
+            .toggle--ui-switch .toggle-option-LEFT {
+                color: #da062a;
+            }
+
+            .toggle--ui-switch .toggle-option-LEFT .toggle__svg > * {
+                fill: #da062a;
+            }
+
+            .toggle--ui-switch .toggle-option-RIGHT {
+                color: #253138;
+            }
+
+            .toggle--ui-switch .toggle-option-RIGHT .toggle__svg > * {
+                fill: #253138;
+            }
+
+            .toggle--ui-switch .toggle__svg {
+                max-width: 16.5px;
+                max-height: 16.5px;
+            }
+
+            .toggle--ui-switch .toggle__label {
+                display: inline-flex;
+                align-items: center;
+            }
+
+            .toggle--ui-switch .toggle-switch {
+                display: block;
+            }
+
+            .toggle--ui-switch [class^="toggle-option-"] {
+                flex: none;
+                min-width: 24px;
+            }
+
+            .toggle--ui-switch .toggle-option-LEFT {
+                text-align: left;
+                transform: scale(1.1);
+            }
+
+            .toggle--ui-switch .toggle-option-RIGHT {
+                text-align: right;
+                transform: scale(0.9);
+            }
+
+            .toggle--ui-switch .toggle__input:checked ~ label .toggle-option-LEFT {
+                transform: scale(0.9);
+            }
+
+            .toggle--ui-switch .toggle__input:checked ~ label .toggle-option-RIGHT {
+                transform: scale(1.1);
+            }
+        </style>
     </head>
     <body>
         <main role="main">
-            <h1>Exercise 1 - Color - Accessibility workshop</h1>
+            <h1>Color - Accessibility workshop</h1>
             <section>
                 <h2>Color</h2>
 

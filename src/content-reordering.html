@@ -1,19 +1,49 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Exercise 2 - keyboard navigation - Content reordering</title>
+        <title>Keyboard navigation - Content reordering</title>
         <link rel="stylesheet" href="css/styles.css" media="all">
+        <style>
+            .nav-content-ordering ul {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .nav-content-ordering li {
+                margin: 0 8px;
+                text-transform: uppercase;
+            }
+
+            .nav-content-ordering a {
+                padding: .5em;
+                display: inline-block;
+                border: 2px solid black;
+                border-radius: .5em;
+                text-decoration: none;
+                color: #333;
+            }
+
+            .nav-content-ordering a:focus {
+                outline: 4px solid orange;
+            }
+
+            .nav-content-ordering--flex li:nth-child(2) {
+                order: 2;
+                margin-left: auto;
+            }
+        </style>
     </head>
     <body>
         <main role="main">
-            <h1>Exercise 2 - keyboard navigation - Accessibility workshop</h1>
+            <h1>Keyboard navigation - Accessibility workshop</h1>
 
             <p class="notice">
                For the following exercise use keyboard navigation to identify the issue and come up with a solution to fix it.
             </p>
 
             <section>
-                <p>Example 1</p>
                 <nav class="nav-content-ordering nav-content-ordering--flex">
                     <ul>
                         <li><a href="/">Home</a></li>
@@ -23,131 +53,6 @@
                         <li><a href="/support">Support</a></li>
                     </ul>
                 </nav>
-
-                <p>Example 2</p>
-                <div class="card-container">
-                    <div class="card">
-                        <h2>
-                            Card One
-                        </h2>
-                        <p>
-                            This is card one in the source of our website.
-                        </p>
-                        <div>
-                            <a href="">Go someplace</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h2>
-                            Card Two
-                        </h2>
-                        <p>
-                            This is card two in the source of our website.
-                        </p>
-                        <div>
-                            <a href="">Go someplace</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h2>
-                            Card Three
-                        </h2>
-                        <p>
-                            This is card three in the source of our website.
-                        </p>
-                        <div>
-                            <a href="">Go someplace</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h2>
-                            Card Four
-                        </h2>
-                        <p>
-                            This is card four in the source of our website.
-                        </p>
-                        <div>
-                            <a href="">Go someplace</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h2>
-                            Card Five
-                        </h2>
-                        <p>
-                            This is card five in the source of our website.
-                        </p>
-                        <div>
-                            <a href="">Go someplace</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h2>
-                            Card Six
-                        </h2>
-                        <p>
-                            This is card six in the source of our website.
-                        </p>
-                        <div>
-                            <a href="">Go someplace</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h2>
-                            Card Seven
-                        </h2>
-                        <p>
-                            This is card seven in the source of our website.
-                        </p>
-                        <div>
-                            <a href="">Go someplace</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h2>
-                            Card Eight
-                        </h2>
-                        <p>
-                            This is card eight in the source of our website.
-                        </p>
-                        <div>
-                            <a href="">Go someplace</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h2>
-                            Card Nine
-                        </h2>
-                        <p>
-                            This is card nine in the source of our website.
-                        </p>
-                        <div>
-                            <a href="">Go someplace</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h2>
-                            Card Ten
-                        </h2>
-                        <p>
-                            This is card ten in the source of our website.
-                        </p>
-                        <div>
-                            <a href="">Go someplace</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h2>
-                            Card Eleven
-                        </h2>
-                        <p>
-                            This is card eleven in the source of our website.
-                        </p>
-                        <div>
-                            <a href="">Go someplace</a>
-                        </div>
-                    </div>
-                </div>
             </section>
         </main>
     </body>

@@ -3,21 +3,32 @@
 <head>
     <title>Headings - Accessibility workshop</title>
     <link rel="stylesheet" href="css/styles.css" media="all">
+    <style>
+        .h2 {
+            display: block;
+            font-size: 1.5em;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 <main role="main">
     <h1>Headings</h1>
 
-    <p class="notice">For the following exercise use the rotor provided by voice over and fix the structure of the
+    <p class="notice">For the following exercise: use the rotor provided by voice over and fix the structure of the
         headings.</p>
 
-    <h5>The Track & Trace code of the package</h5>
+    <h5 class="h2">The Track & Trace code of the package</h5>
     <p>You can find it in the shipping confirmation. Check if the time slot has changed using this link.</p>
 
-    <h3>The delivery address</h3>
+    <h3 class="h2">The delivery address</h3>
     <p>Did you enter the correct delivery address? Make sure to check your postal code as well.</p>
 
-    <h6>Your mailbox</h6>
+    <h6 class="h2">Your mailbox</h6>
     <p>Did you receive a not-home notification? The package may have been delivered to your neighbors, or the
         delivery driver may have planned a new delivery moment.</p>
 </main>
