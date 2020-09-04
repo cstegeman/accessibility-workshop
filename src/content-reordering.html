@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Keyboard navigation - Content reordering</title>
+        <link rel="stylesheet" href="css/styles.css" media="all">
+        <style>
+            .nav-content-ordering ul {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .nav-content-ordering li {
+                margin: 0 8px;
+                text-transform: uppercase;
+            }
+
+            .nav-content-ordering a {
+                padding: .5em;
+                display: inline-block;
+                border: 2px solid black;
+                border-radius: .5em;
+                text-decoration: none;
+                color: #333;
+            }
+
+            .nav-content-ordering a:focus {
+                outline: 4px solid orange;
+            }
+
+            .nav-content-ordering--flex li:nth-child(2) {
+                order: 2;
+                margin-left: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <main role="main">
+            <h1>Keyboard navigation - Accessibility workshop</h1>
+
+            <div class="notice">
+                For the following exercise:
+                <ol>
+                    <li>Use the <a href="https://accessibilityinsights.io/" target="_blank">Accessibility Insights for
+                        Web</a> plugin to look at the tab stops
+                    </li>
+                    <li>use keyboard navigation to identify the issue and come up with a solution to fix it. For now you
+                        can ignore the design consequences this potentially has.
+                    </li>
+                </ol>
+            </div>
+
+            <section >
+                <nav class="nav-content-ordering nav-content-ordering--flex">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/products">Our Products</a></li>
+                        <li><a href="/support">Support</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </main>
+    </body>
+</html>

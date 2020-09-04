@@ -1,13 +1,35 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Exercise 2 - keyboard navigation - Modal</title>
+    <title>Modal box - Accessibility workshop</title>
     <link rel="stylesheet" href="css/styles.css" media="all">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(211, 211, 211, 0.4);
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            margin: 25% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
+        }
+    </style>
 </head>
 <body>
     <main>
-        <h1>Modal</h1>
-        <p class="notice">For this exercise provide right steps to access the modal box using keyboard navigation.</p>
+        <h1>Modal box</h1>
+        <p class="notice">For the following exercise write pseudo code to enable closing of the modal box with the
+            escape key, besides that use "document.activeElement" to store and restore the focus when opening and
+            closing the modal</p>
         <section>
             <button class="open-modal">Register Now!</button>
 
