@@ -1,11 +1,7 @@
 # accessibility-workshop
 An accessibility workshop for developers
 
-## Prerequisites
-- [Axe browser extension](https://www.deque.com/axe/)
-- [Wave browser extension](https://wave.webaim.org/extension/)
-- [Accessibility Insights for Web](https://accessibilityinsights.io/docs/en/web/overview)
-- [I want to see like the color blind](https://www.crx4chrome.com/extensions/jebeedfnielkcjlcokhiobodkjjpbjia/)
+## Required before attending
 - [Voice over basics on Mac](https://www.youtube.com/watch?v=5R-6WvAihms)
 
 ## Install
