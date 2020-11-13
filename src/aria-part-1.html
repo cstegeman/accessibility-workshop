@@ -20,10 +20,10 @@
     </div>
 
     <form method="post">
-        <div>
+        <div role="group" aria-label="House type">
             House type:
-            <input type="radio" name="type" value="rental"> Rental<br>
-            <input type="radio" name="type" value="mortgage"> Mortgage
+            <input type="radio" name="type" value="rental" id="rental"> <label for="rental">Rental</label><br>
+            <input type="radio" name="type" value="mortgage" id="mortgage"> <label for="mortgage">Mortgage</label>
         </div>
 
         <button type="submit">Proceed</button>

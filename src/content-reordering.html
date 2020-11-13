@@ -29,10 +29,10 @@
                 outline: 4px solid orange;
             }
 
-            /*.nav-content-ordering--flex li:nth-child(2) {*/
-            /*    order: 2;*/
-            /*    margin-left: auto;*/
-            /*}*/
+            .nav-content-ordering li:last-child {
+                text-align: right;
+                flex: 1 1 auto;
+            }
         </style>
     </head>
     <body>
@@ -52,13 +52,13 @@
             </div>
 
             <section >
-                <nav class="nav-content-ordering nav-content-ordering--flex">
+                <nav class="nav-content-ordering">
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
                         <li><a href="/about">About Us</a></li>
                         <li><a href="/products">Our Products</a></li>
                         <li><a href="/support">Support</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
                     </ul>
                 </nav>
             </section>
