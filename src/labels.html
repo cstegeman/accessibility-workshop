@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Forms - Accessibility workshop</title>
+    <link rel="stylesheet" href="css/styles.css" media="all">
+</head>
+<body>
+<main role="main">
+    <h1>Forms</h1>
+
+    <div class="notice">
+        For this exercise:
+        <ol>
+            <li>Use the <a href="https://www.deque.com/axe/">axe browser extension</a> to investigate the page and fix
+                the issues
+            </li>
+        </ol>
+    </div>
+
+    <form method="post">
+        <fieldset>
+            <legend>
+                Brands
+            </legend>
+            <label for="brand_1">
+                <div class="radio-button">
+                    <input type="radio" name="brands" id="brand_1" value="1">
+                    <label class="radio-button__label" for="brand_1">
+                        Brand 1 (41)
+                    </label>
+                </div>
+            </label>
+            <label for="brand_2">
+                <div class="radio-button">
+                    <input type="radio" name="brands" id="brand_2" value="2">
+                    <label class="radio-button__label" for="brand_2">
+                        Brand 2 (41)
+                    </label>
+                </div>
+            </label>
+        </fieldset>
+
+        <button type="submit">Proceed</button>
+    </form>
+</main>
+</body>
+</html>
