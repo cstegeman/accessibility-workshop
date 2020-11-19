@@ -22,7 +22,7 @@
         Please click the following button.
     </p>
 
-    <button id="toggle-button">Show tooltip</button>
+    <button id="toggle-button" aria-expanded="false">Show tooltip</button>
 
     <div id="tooltip" hidden>
         This is the tooltip containing the related information. Please click the Show tooltip button to hide.
@@ -38,8 +38,10 @@
 
         if (button.getAttribute('aria-expanded') === 'false') {
             // Hint: Add code here
+            button.setAttribute('aria-expanded', 'true');
         } else {
             // Hint: Add code here
+            button.setAttribute('aria-expanded', 'false');
         }
     });
 </script>
