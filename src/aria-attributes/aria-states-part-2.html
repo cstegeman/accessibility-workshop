@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Aria attributes - Accessibility workshop</title>
+    <link rel="stylesheet" href="../css/styles.css" media="all">
+</head>
+<body>
+<main role="main">
+    <h1>Hidden</h1>
+
+    <div class="notice">
+        For this exercise:
+        <ol>
+            <li>Identify the issues with the use of aria-hidden attribute</li>
+            <li><a href="https://www.w3.org/TR/wai-aria-1.0/states_and_properties#aria-hidden" target="_blank">Background information about the aria-hidden attribute</a></li>
+            <li>Compare voiceover/screen reader navigation within a webpage v/s focus navigation of links to investigate the page</li>
+        </ol>
+    </div>
+
+    <div aria-hidden="true">
+        <p>
+            Identify what is wrong with the content?
+        </p>
+        <a href="#">Navigation link</a>
+    </div>
+
+    <p>
+        Is the following link great or not?
+    </p>
+    <a aria-describedby="description" href="#">Navigation Link</a>
+    <p id="description">
+        This link is <span aria-hidden="true">not </span>great.
+    </p>
+</main>
+</body>
+</html>
